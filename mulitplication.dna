@@ -1,0 +1,17 @@
+directive sample 10000000000.0 10
+directive scale 1000.0
+def N1 = 10
+def N2 = 10
+def N3 = 10
+def N4 = 10
+
+def InputA1() = <A1 11^ 12 21^ 22 >
+def InputA2() = <A2 31^ 32 41^ 42>
+def InputB1() = {11^*}[12]<C1>:{31^*}[32]<C2>
+def InputB2() = {21^*}[22]<C2>:{41^*}[42]<C2>
+
+( N1*InputA1()
+| N2*InputA2()
+| N3*InputB1()
+| N4*InputB2()
+)
